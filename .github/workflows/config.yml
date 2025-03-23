@@ -1,10 +1,17 @@
 name: r2s config
 
 on:
+  repository_dispatch:
   workflow_dispatch:
-  workflow_call:
-  # schedule:
-  #   - cron: 0 20 * * *
+    inputs:
+      ssh:
+        description: 'SSH connection to Actions'
+        required: false
+        default: 'true'
+        type: choice
+        options:
+          - true
+          - false
 
 env:
   REPO_URL: https://github.com/VIKINGYFY/immortalwrt.git
