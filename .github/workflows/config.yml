@@ -14,10 +14,14 @@ on:
           - false
 
 env:
+env:
   REPO_URL: https://github.com/VIKINGYFY/immortalwrt.git
   REPO_BRANCH: main
   CONFIG_FILE: configs/Taiyi.config
   DIY_SCRIPT: scripts/Roc-script.sh
+  FEEDS_CONF: feeds.conf.default  # 添加此行
+  DIY_P1_SH: diy-part1.sh         # 添加此行
+  DIY_P2_SH: diy-part2.sh  
   CLASH_KERNEL: amd64
   CACHE_TOOLCHAIN: true
   UPLOAD_BIN_DIR: false
